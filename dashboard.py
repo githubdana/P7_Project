@@ -19,14 +19,10 @@ def load_data():
     return data, sample, target
 
 def load_model():
-    pickle_in = open(r"C:\Users\dana_\PycharmProjects\Projet_Credit_Kaggle\LGBMClassifier_App_New.pkl", "rb")
+    pickle_in = open("LGBMClassifier_App_New.pkl", "rb")
     clf=pickle.load(pickle_in)
     return clf
 
-@st.cache(allow_output_mutation=True)
-def load_knn(sample):
-    knn = knn_training(sample)
-    return knn
 
 @st.cache
 def load_infos_gen(data):
@@ -62,20 +58,6 @@ def load_prediction(sample, id, clf):
     X=sample.iloc[:, :-1]
     score = clf.predict_proba(X[X.index == int(id)])[:,1]
     return score
-
-@st.cache
-def load_kmeans(sample, id, mdl):
-    index = sample[sample.index == int(id)].index.values
-    index=index[0]
-    data_client=pd.DataFrame(sample.loc[sample.index, :])
-    df_neighbors=pd.DataFrame(knn.fit_predict(data_client), index=data_client.index)
-    df_neighbors=pd.concat([df_neighbors, data], axis=1)
-    return df_neighbors.iloc[:,1:].sample(10)
-
-@st.cache
-def knn_training(sample):
-    knn=KMeans(n_clusters=2).fit(sample)
-    return knn
 
 
 #Loading data....

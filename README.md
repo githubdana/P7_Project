@@ -8,10 +8,10 @@ L'entreprise "Prêt à dépenser" souhaite développer un modèle de scoring de 
 ## Introduction
 Pour ce projet, les données ont été manipulées en Python sur Jupyter Notebook, et le développement de l'app s'est fait sur Streamlit.
 
-### Les données
+## Les données
  - Données Kaggle : [Home Credit Default](https://www.kaggle.com/c/home-credit-default-risk/data)
 
-### Compétences évaluées
+## Compétences évaluées
  - Présenter son travail de modélisation à l'oral
  - Déployer un modèle via une API dans le Web
  - Utiliser un logiciel de version de code pour assurer l’intégration du modèle

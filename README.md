@@ -8,10 +8,10 @@ L'entreprise "Prêt à dépenser" souhaite développer un modèle de scoring de 
 ## Introduction
 Pour ce projet, les données ont été manipulées en Python sur Jupyter Notebook, et le développement de l'app s'est fait sur Streamlit.
 
-### Les données
+## Les données
  - Données Kaggle : [Home Credit Default](https://www.kaggle.com/c/home-credit-default-risk/data)
 
-### Compétences évaluées
+## Compétences évaluées
  - Présenter son travail de modélisation à l'oral
  - Déployer un modèle via une API dans le Web
  - Utiliser un logiciel de version de code pour assurer l’intégration du modèle
@@ -24,3 +24,11 @@ L'installation d'Anaconda permet l'installation de Python et de ses librairies d
 Voici le lien de téléchargement : [Anaconda](https://www.anaconda.com/download)
 
 Si vous souhaitez lancer le projet, il sera nécessaire d'installer Jupyter Notebook sur votre ordinateur.
+
+## Description des fichiers:
+- dashboard.py contient le code de l'application Streamlit;
+- data.csv et sample.scv sont les données utilisées en entrée dans le modèle (l'un avant encodage, l'autre après encodage);
+- requirements.txt est la liste des packages utilisés;
+- LGBMClassifier_App_New.pkl est le fichier pickle contenant le modèle LGBMClassifier optimisé;
+- P7_01_EDA corresspond au notebook pour la partie Analyse Exploratoire des Données;
+- P7_02_notebook_modeles corresspond au notebook pour la partie modélisation, algorithme optimisation et métrique d'évaluation
